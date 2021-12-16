@@ -4,7 +4,7 @@ const socket = require('socket.io');
 const app = express()
 app.use(express.static("public")); //automatically it will render index.html 
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 let server = app.listen(port,()=>{
     console.log("Listening to port "+port);
 })
